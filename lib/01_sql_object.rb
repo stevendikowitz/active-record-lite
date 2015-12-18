@@ -5,18 +5,27 @@ require 'active_support/inflector'
 
 class SQLObject
   def self.columns
-    # ...
+    return @columns if @columns
+
+    query = DBConnection.execute2(<<-SQL)
+      SELECT
+        *
+      FROM
+        #{self.table_name}
+    SQL
+
+    @columns = query.first.map(&:to_sym)
   end
 
   def self.finalize!
   end
 
   def self.table_name=(table_name)
-    # ...
+    @table_name = table_name
   end
 
   def self.table_name
-    # ...
+    @table_name ||= self.to_s.tableize
   end
 
   def self.all
@@ -32,7 +41,7 @@ class SQLObject
   end
 
   def initialize(params = {})
-    # ...
+    @params = params
   end
 
   def attributes
