@@ -20,17 +20,3 @@ end
 class SQLObject
   extend Searchable
 end
-
-
-# col_names = self.class.columns.drop(1)
-# set_col_names = col_names.map { |col| "#{col} = ?" }
-# set_col_names = set_col_names.join(", ")
-# attr_values = self.attribute_values.drop(1)
-#
-# DBConnection.execute(<<-SQL, attr_values, self.id)
-#   UPDATE
-#
-#   SET
-#     #{set_col_names}
-#   WHERE
-#     id = ?
