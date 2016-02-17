@@ -29,5 +29,5 @@ Have fun poking around.
 
 
 
-[ActiveRecord][https://github.com/rails/rails/tree/master/activerecord]
-[stevendikowitz.com][http://stevendikowitz.com]
+[ActiveRecord]:https://github.com/rails/rails/tree/master/activerecord
+[stevendikowitz.com]:http://stevendikowitz.com
