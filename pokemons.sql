@@ -38,4 +38,5 @@ VALUES
   (1, "Onyx", 1),
   (2, "Magikarp", 2),
   (3, "Electrode", 3),
-  (4, "Weedle", 4);
+  (4, "Weedle", 4),
+  (5, "Geodude", NULL);

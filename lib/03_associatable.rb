@@ -40,7 +40,7 @@ module Associatable
      self.assoc_options[name] = BelongsToOptions.new(name, options)
 
      define_method(name) do
-       options = self.assoc_options[name]
+       options = self.class.assoc_options[name]
        options.model_class.where(options.primary_key => self.send(options.foreign_key)).first
      end
 
