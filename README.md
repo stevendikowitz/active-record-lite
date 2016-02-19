@@ -14,9 +14,9 @@ I've created a minidatabase for testing.
 ## Lib Contents
 
 Each file in `lib/` cooresponds to ActiveRecord functionality:
-* `01_sql_object` is responsible for the `ActiveRecord::Base` logic
-* `02_searchable` handles the packages SQL queries into bite-sized methods, such as `::where`
-* `03_associatable` and `04_associatable2` handles the relationships between objects in different tables. Methods here include `belongs_to`, `has_many` and `has_one_through`
+* `sql_object` is responsible for the `ActiveRecord::Base` logic
+* `searchable` handles the packages SQL queries into bite-sized methods, such as `::where`
+* `associatable` handles the relationships between objects in different tables. Methods here include `belongs_to`, `has_many` and `has_one_through`
 
 ## Running RSpecs
 
